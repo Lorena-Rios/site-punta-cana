@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Rawline', 'sans-serif'], // usa "Rawline" como sans
+        sans: ['Montserrat', 'sans-serif'], // usa "Montserrat" como sans
         rawline: ['Rawline', 'sans-serif'] // opcional, alias dedicado
       },
     },
