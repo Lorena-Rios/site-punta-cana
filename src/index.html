@@ -13,10 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./static/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -119,11 +116,12 @@
           />
         </div>
 
+        <!-- Botão -->
         <div class="absolute bottom-16 z-30">
-          <a
-            href="javascript:void(0)"
-            onclick="openModal('BAIXAR BOOK')"
-            class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-normal text-xl px-8 py-3 rounded shadow-lg transition"
+          <a 
+            href="javascript:void(0)" 
+            onclick="openModal('')" 
+            class="inline-block bg-orange-600 hover:bg-orange-700 text-white text-xl font-semibold px-8 py-3 rounded-full shadow-lg transition"
           >
             BAIXE O BOOK
           </a>
@@ -167,8 +165,101 @@
     </section>
 
     <!-- SEÇÃO CARROSSEL -->
-    <section class="text-stone-700 font-normal h-auto lg:min-h-[100vh] overflow-x-hidden overflow-y-hidden relative" >
-    
+    <section class="py-12">
+      <div class="container mx-auto px-6 text-center">
+
+        <!-- Carrossel -->
+        <div class="relative">
+          <div class="swiper mySwiper rounded-md shadow-md overflow-hidden">
+            <div class="swiper-wrapper">
+
+              <!-- Slide -->
+              <div class="swiper-slide relative">
+                <img src="./static/images/carrossel/ILHA-DO-MEIO---ÁREA-GOURMET (1).png" alt="Área Gourmet"
+                    class="w-full h-[80vh] object-cover">
+
+                <!-- Label canto inferior direito -->
+                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-l font-semibold px-3 py-1 rounded-full shadow">
+                  ÁREA GOURMET
+                </span>
+              </div>
+
+              <!-- Slide -->
+              <div class="swiper-slide relative">
+                <img src="./static/images/carrossel/ILHA-DO-MEIO---TERRAÇO-DESCOBERTO.png" alt="Terraço descoberto"
+                    class="w-full h-[80vh] object-cover">
+
+                <!-- Label canto inferior direito -->
+                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-l font-semibold px-3 py-1 rounded-full shadow">
+                  TERRAÇO DESCOBERTO
+                </span>
+              </div>
+
+
+              <!-- Slide -->
+              <div class="swiper-slide relative">
+                <img src="./static/images/carrossel/ILHA-DO-MEIO---TERRAÇO-DESCOBERTO-COM-HIDRO.png" alt="Terraço descoberto Hidro"
+                    class="w-full h-[80vh] object-cover">
+
+                <!-- Label canto inferior direito -->
+                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-l font-semibold px-3 py-1 rounded-full shadow">
+                  TERRAÇO DESCOBERTO COM HIDRO
+                </span>
+              </div>
+
+              <!-- Slide -->
+              <div class="swiper-slide relative">
+                <img src="./static/images/carrossel/ILHA-DO-MEIO---JARDIM-E-ÁREA-DE-SERVIÇO.png" alt="Jardim e Área de Serviço"
+                    class="w-full h-[80vh] object-cover">
+
+                <!-- Label canto inferior direito -->
+                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-l font-semibold px-3 py-1 rounded-full shadow">
+                  JARDIM E ÁREA DE SERVIÇO
+                </span>
+              </div>
+
+                            <!-- Slide -->
+              <div class="swiper-slide relative">
+                <img src="./static/images/carrossel/ILHA DO MEIO - DECK E PISCINA.png" alt="Deck e Piscina"
+                    class="w-full h-[80vh] object-cover">
+
+                <!-- Label canto inferior direito -->
+                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-l font-semibold px-3 py-1 rounded-full shadow">
+                  DECK E PISCINA
+                </span>
+              </div>
+
+              <!-- Slide -->
+              <div class="swiper-slide relative">
+                <img src="./static/images/carrossel/ILHA-DO-MEIO---ÁREA-DE-CONVIVÊNCIA.png" alt="Área de Convivência"
+                    class="w-full h-[80vh] object-cover">
+
+                <!-- Label canto inferior direito -->
+                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-l font-semibold px-3 py-1 rounded-full shadow">
+                  ÁREA DE CONVIVÊNCIA
+                </span>
+              </div>
+
+
+            </div>
+
+            <!-- Botões de navegação -->
+            <div class="swiper-button-prev !text-white !text-4xl "></div>
+            <div class="swiper-button-next !text-white !text-4xl"></div>
+          </div>
+        </div>
+      <!-- Botão -->
+      <div class="relative mt-12 flex justify-center z-20">
+        <a 
+          href="javascript:void(0)" 
+          onclick="openModal('')"
+          class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition"
+        >
+          AGENDAR VISITA
+        </a>
+      </div>
+
+      </div>
     </section>
 
     <!-- SEÇÃO APARTAMENTOS -->
@@ -306,15 +397,20 @@
           Viva um paraíso exclusivo na praia de Itacimirim.  Garanta o seu 2 suítes com lavabo à beira da lagoa
         </p>
       
-        <a href="#"
-          class="mt-8 inline-block bg-orange-600 text-white text-xl font-semibold px-8 py-3 rounded-md shadow hover:bg-orange-700 transition">
+      <!-- Botão -->
+      <div class="relative mt-12 flex justify-center z-20">
+        <a 
+          href="javascript:void(0)" 
+          onclick="openModal('')" 
+          class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition"
+        >
           BAIXE O BOOK
         </a>
       </div>
     </section>
 
     <!-- SEÇÃO ARQUITETOS -->
-    <section class="relative h-[100vh] w-full py-16 px-6 lg:px-20 overflow-hidden bg-[#FBF1C3]">
+    <section class="relative h-[80vh] w-full py-16 px-6 lg:px-20 overflow-hidden">
 
       <!-- Folhagem topo -->
       <div class="absolute top-0 left-0 w-full h-56 overflow-hidden z-0">
@@ -361,7 +457,7 @@
       <div class="relative mt-12 flex justify-center z-20">
         <a 
           href="javascript:void(0)" 
-          onclick="openModal('FALE COM CORRETOR')" 
+          onclick="openModal('')" 
           class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition"
         >
           FALE COM CORRETOR
@@ -372,81 +468,98 @@
 
     <!-- SEÇÃO EMPREENDIMENTO -->
     <section class="py-16">
-      <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-6">
+      <div class="container mx-auto px-6">
 
-        <!-- Texto principal -->
-        <div class="space-y-6">
-          <div class="flex items-center space-x-4">
-            <img src="./static/images/empreendimento/Group.png" alt="Logo 3i" class="w-20 h-20 object-contain">
-            <div>
-              <h2 class="text-2xl font-bold text-orange-600">31 ANOS</h2>
-              <p class="text-xl font-semibold text-orange-600 leading-tight">
-                CONSTRUINDO <br> CONFIANÇA E QUALIDADE
-              </p>
+        <!-- Grid principal: texto institucional à esquerda, destaque à direita -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+          <!-- Texto institucional -->
+          <div class="space-y-6">
+            <div class="flex items-center space-x-4">
+              <img src="./static/images/empreendimento/Group.png" alt="Logo 3i" class="w-20 h-20 object-contain">
+              <div>
+                <h2 class="text-2xl font-bold text-orange-600">31 ANOS</h2>
+                <p class="text-xl font-semibold text-orange-600 leading-tight">
+                  CONSTRUINDO <br> CONFIANÇA E QUALIDADE
+                </p>
+              </div>
             </div>
-          </div>
 
-          <p class="text-gray-700 leading-relaxed">
-            Desde sua fundação, em novembro de 1994, a 3i Incorporações se consolidou como referência em ética
-            profissional, excelência técnica e compromisso com o cliente, sustentada por uma reputação pautada na
-            responsabilidade social e ambiental.
-          </p>
+            <p class="text-gray-700 leading-relaxed">
+              Desde sua fundação, em novembro de 1994, a 3i Incorporações se consolidou como referência em ética
+              profissional, excelência técnica e compromisso com o cliente, sustentada por uma reputação pautada na
+              responsabilidade social e ambiental.
+            </p>
 
-          <p class="text-gray-700 leading-relaxed">
-            A 3i também se destaca por sua versatilidade, com atuação desde empreendimentos residenciais até obras
-            comerciais e consultoria para terrenos.
-          </p>
+            <p class="text-gray-700 leading-relaxed">
+              A 3i também se destaca por sua versatilidade, com atuação desde empreendimentos residenciais até obras
+              comerciais e consultoria para terrenos.
+            </p>
 
-          <p class="text-gray-700 leading-relaxed">
-            Com foco nas pessoas, a empresa traduz seu propósito, Sonhar e Realizar = Incorporar e Construir, em
-            resultados com qualidade certificada em todas as etapas da incorporação, relações sólidas, segurança e
-            satisfação.
-          </p>
-        </div>
-
-        <!-- Destaque principal + cards -->
-        <div class="space-y-8">
-
-          <!-- Empreendimento principal -->
-          <div>
-            <img src="./static/images/empreendimento/Book Punta Cana 30x30 15 08-01.png" alt="Punta Cana Lodge" class="rounded-md shadow-md mb-4">
-            <h3 class="text-orange-600 font-bold text-lg uppercase">Punta Cana Lodge</h3>
-            <p class="text-gray-700 font-semibold">Condomínio com 47 apartamentos em Itacimirim.</p>
-            <p class="text-gray-700 mt-2">
-              O Punta Cana Lodge foi um sucesso de vendas. Um empreendimento que revela o cuidado em integrar a
-              natureza aos espaços com identidade e beleza singular. O Punta Cana Lodge trouxe qualidade de vida à
-              beira-mar e o Lagoon à beira da tranquilidade da Lagoa.
+            <p class="text-gray-700 leading-relaxed">
+              Com foco nas pessoas, a empresa traduz seu propósito, Sonhar e Realizar = Incorporar e Construir, em
+              resultados com qualidade certificada em todas as etapas da incorporação, relações sólidas, segurança e
+              satisfação.
             </p>
           </div>
 
-          <!-- Grid de empreendimentos -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <!-- Destaque Punta Cana -->
+          <div>
+            <div class="grid md:grid-cols-2 gap-6 items-start">
+              <!-- Imagem -->
+              <img src="./static/images/empreendimento/Book Punta Cana 30x30 15 08-01.png"
+                  alt="Punta Cana Lodge"
+                  class="rounded-md shadow-md w-full h-[250px] object-cover">
 
-            <!-- Times Square -->
-            <div>
-              <img src="./static/images/empreendimento/Book Punta Cana 30x30 15 08-02.png" alt="Times Square" class="rounded-md shadow-md mb-2">
-              <h4 class="text-orange-600 font-bold uppercase text-sm">Times Square</h4>
-              <p class="text-gray-700 text-sm">1/4 com suíte <br> Caminho das Árvores</p>
+              <!-- Texto à direita -->
+              <div>
+                <h3 class="text-orange-600 font-bold text-lg uppercase">Punta Cana Lodge</h3>
+                <p class="text-gray-700 font-semibold">Condomínio com 47 apartamentos em Itacimirim.</p>
+                <p class="text-gray-700 mt-2 text-sm leading-relaxed">
+                  O Punta Cana Lodge foi um sucesso de vendas. Um empreendimento que revela o cuidado em integrar a
+                  natureza aos espaços com identidade e beleza singular. O Punta Cana Lodge trouxe qualidade de vida à
+                  beira-mar e o Lagoon à beira da tranquilidade da Lagoa.
+                </p>
+              </div>
             </div>
 
-            <!-- Coral de Itacimirim -->
-            <div>
-              <img src="./static/images/empreendimento/Book Punta Cana 30x30 15 08-03.png" alt="Coral de Itacimirim" class="rounded-md shadow-md mb-2">
-              <h4 class="text-orange-600 font-bold uppercase text-sm">Coral de Itacimirim</h4>
-              <p class="text-gray-700 text-sm">14 apartamentos com piscina, parque infantil e quiosque/bar</p>
-            </div>
+            <!-- Cards inferiores -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
 
-            <!-- Pallazzo Torre Bárbara -->
-            <div>
-              <img src="./static/images/empreendimento/Book Punta Cana 30x30 15 08-04.png" alt="Pallazzo Torre Bárbara" class="rounded-md shadow-md mb-2">
-              <h4 class="text-orange-600 font-bold uppercase text-sm">Pallazzo Torre Bárbara</h4>
-              <p class="text-gray-700 text-sm">3 suítes Graça</p>
-            </div>
+              <!-- Times Square -->
+              <div>
+                <img src="./static/images/empreendimento/Book Punta Cana 30x30 15 08-02.png"
+                    alt="Times Square"
+                    class="rounded-sm shadow-md w-full h-[180px] object-cover mb-2">
+                <h4 class="text-orange-600 font-bold uppercase text-sm">Times Square</h4>
+                <p class="text-gray-700 text-sm">1/4 com suíte <br> Caminho das Árvores</p>
+              </div>
 
+              <!-- Coral de Itacimirim -->
+              <div>
+                <img src="./static/images/empreendimento/Book Punta Cana 30x30 15 08-03.png"
+                    alt="Coral de Itacimirim"
+                    class="rounded-sm shadow-md w-full h-[180px] object-cover mb-2">
+                <h4 class="text-orange-600 font-bold uppercase text-sm">Coral de Itacimirim</h4>
+                <p class="text-gray-700 text-sm">14 apartamentos com piscina, parque infantil e quiosque/bar</p>
+              </div>
+
+              <!-- Pallazzo Torre Bárbara -->
+              <div>
+                <img src="./static/images/empreendimento/Book Punta Cana 30x30 15 08-04.png"
+                    alt="Pallazzo Torre Bárbara"
+                    class="rounded-sm shadow-md w-full h-[180px] object-cover mb-2">
+                <h4 class="text-orange-600 font-bold uppercase text-sm">Pallazzo Torre Bárbara</h4>
+                <p class="text-gray-700 text-sm">3 suítes Graça</p>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+
 
 
     <!-- SEÇÃO MAPA -->
@@ -454,12 +567,21 @@
     </section>
 
     <!-- SEÇÃO FORMULÁRIO -->
-    <section class="form-section relative overflow-hidden py-16 mt-16 bg-cover bg-center" style="background-image: url('./static/images/bg-praia.png');">
+    <section class="form-section relative overflow-hidden py-16 mt-16 bg-cover bg-center">
       
+      <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#FBF1C3] to-transparent z-10"></div>
+
+      <!-- Background -->
+      <img
+      src="./static/images/bg-praia.png"
+      alt="Background Image"
+      class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+      />
+
       <div class="relative z-20 w-[90vw] max-w-5xl mx-auto text-center">
-        
+      
         <!-- Título -->
-        <h2 class="text-2xl font-semibold text-green-900 mb-8">
+        <h2 class="text-3xl font-semibold text-green-900 mb-8">
           Cadastre-se e saiba mais!
         </h2>
 
@@ -506,11 +628,24 @@
         </div>
 
         <!-- Texto final -->
-        <p class="mt-10 text-green-900 font-semibold">
+        <p class="mt-10 text-2xl text-green-900 font-medium">
           AGENDE SUA VISITA
         </p>
-
       </div>
+      
+      <!-- Folhas -->
+      <img 
+        src="./static/images/folhas 3.png" 
+        alt="Folhagem decorativa"
+        class="absolute bottom-0 left-0 w-80 z-30 pointer-events-none"
+      />
+
+      <!-- Conchas -->
+      <img 
+        src="./static/images/summer-time-concept-flat-lay-composition-with-beautiful-starfish-sea-shells-colored-table-top-view-with-copy-space-text 2 1.png" 
+        alt="Folhagem decorativa"
+        class="absolute bottom-0 right-0 w-80 z-30 pointer-events-none"
+      />
     </section>
 
 
@@ -525,7 +660,7 @@
     
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="static/js/main.js"></script>
 </html>
