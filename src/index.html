@@ -51,27 +51,57 @@
     <!-- NAVBAR -->
     <nav
       id="navbar"
-      class="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-sm shadow flex justify-end px-8 py-8"
+      class="fixed top-0 right-0 w-full z-50 bg-black/60 backdrop-blur-sm shadow px-4 py-3 flex justify-end items-center"
     >
-      <div class="hidden md:flex space-x-8">
-        <a
-          href="#section-localizacao"
-          class="text-stone-50 text-sm tracking-wide hover:text-lime-100 transition"
-          >LOCALIZAÇÃO</a
-        >
-        <a
-          href="javascript:void(0)"
-          onclick="openModal('BAIXAR BOOK')"
-          class="text-stone-50 text-sm tracking-wide hover:text-lime-100 transition"
-          >BAIXAR BOOK</a
-        >
-        <a
-          href="javascript:void(0)"
-          onclick="openModal('FALE COM UM CONSULTOR')"
-          class="text-stone-50 text-sm tracking-wide hover:text-lime-100 transition"
-          >FALE COM UM CONSULTOR</a
-        >
+
+
+      <!-- desktop -->
+      <div class="hidden md:flex md:space-x-8 text-right">
+        <a 
+        href="#section-localizacao" 
+        class="text-stone-50 text-sm tracking-wide hover:text-lime-100 transition py-1">
+        LOCALIZAÇÃO</a>
+
+        <a 
+        href="javascript:void(0)" 
+        onclick="openModal('')" 
+        class="text-stone-50 text-sm tracking-wide hover:text-lime-100 transition py-1">
+        BAIXAR BOOK</a>
+
+        <a 
+        href="javascript:void(0)" 
+        onclick="openModal('')" 
+        class="text-stone-50 text-sm tracking-wide hover:text-lime-100 transition py-1">
+        FALE COM UM CONSULTOR</a>
       </div>
+
+      <!-- hamburguer -->
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none ml-4">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- mobile -->
+      <div id="menu" class="absolute top-[60px] right-4 md:hidden hidden bg-white/90 backdrop-blur-lg rounded-lg shadow-lg p-4 space-y-3">
+        <a 
+        href="#section-localizacao" 
+        class="block text-stone-800 text-base tracking-wide hover:text-lime-700 transition">
+        LOCALIZAÇÃO</a>
+
+        <a 
+        href="javascript:void(0)" 
+        onclick="openModal('')" 
+        class="block text-stone-800 text-base tracking-wide hover:text-lime-700 transition">
+        BAIXAR BOOK</a>
+
+        <a 
+        href="javascript:void(0)" 
+        onclick="openModal('')" 
+        class="block text-stone-800 text-base tracking-wide hover:text-lime-700 transition">
+        FALE COM UM CONSULTOR</a>
+      </div>
+
     </nav>
 
     <!-- HERO SECTION -->
@@ -84,32 +114,47 @@
         class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
       />
 
-      
-        <div class="absolute top-0 left-40 z-40">
-          <img
-            src="./static/images/wooden- 1.png"
-            class="w-[50vh] drop-shadow-lg"
-          />
-        </div>
+      <!-- Logo em madeira -->
+      <div class="absolute top-0 left-20 md:left-40 z-40">
+        <img
+          src="./static/images/wooden- 1.png"
+          class="w-[30vh] md:w-[50vh] drop-shadow-lg"
+        />
+      </div>
 
       <div class="relative w-full h-full flex justify-center items-center">
-        <img
-          src="./static/images/Group 842.png"
-          alt="punta cana lagoon"
-          class="w-full max-w-7xl h-auto object-contain z-10"
-        />
 
-      
-        <!-- folhas -->
-        <div class="absolute bottom-4 left-0 z-30">
+        <!-- DESKTOP -->
+        <div class="mt-8 hidden lg:block">
+          <img 
+          src="./static/images/ilha do meio vista da lago.png" 
+          alt="punta cana lagoon" 
+          class="w-full max-w-7xl h-auto object-contain z-10" />
+        </div>
+
+        <!-- MOBILE -->
+        <div class="block lg:hidden">
+          <img 
+          src="./static/images/ilha do meio vista da lago_noText.png" 
+          alt="punta cana lagoon" 
+          class="mt-8 w-full h-auto object-contain" />
+          <p class="mt-4 text-center max-w-prose bottom-3 right-3 text-white text-l font-semibold px-1 py-1 rounded-full">
+            Um paraíso exclusivo para chamar de seu na praia de Itacimirim
+            <i><br><br>2 suítes com lavabo
+            <br>na praia de Itacimirim</i>
+          </p>
+        </div>
+
+        <!-- Folhas -->
+        <div class="hidden md:block absolute bottom-2 left-0 z-30">
           <img
             src="./static/images/folhas 1.png"
             class="w-88 drop-shadow-lg"
           />
         </div>
 
-        <!-- casal -->
-        <div class="absolute bottom-0 right-10 z-30">
+        <!-- Casal -->
+        <div class="hidden md:block absolute bottom-0 right-10 z-30">
           <img
             src="./static/images/CASAL 1.png"
             class="w-88 drop-shadow-lg"
@@ -121,17 +166,17 @@
           <a 
             href="javascript:void(0)" 
             onclick="openModal('')" 
-            class="inline-block bg-orange-600 hover:bg-orange-700 text-white text-xl font-semibold px-8 py-3 rounded-full shadow-lg transition"
+            class="inline-block bg-orange-600 hover:bg-orange-700 text-white text-md md:text-xl font-semibold px-8 md:px-8 py-3 rounded-full shadow-lg transition"
           >
             BAIXE O BOOK
           </a>
         </div>
       </div>
     </section>
-
+    
     <!-- SEÇÃO LOCALIZAÇÃO -->
     <section 
-    class="relative overflow-hidden w-full h-[100vh] flex items-center justify-center"
+    class="relative overflow-hidden w-full h-[60vh] md:h-[100vh] flex items-center justify-center"
     id="section-localizacao"
     >
 
@@ -139,19 +184,36 @@
       <img
         src="./static/images/Group 841.png"
         alt="Background Image"
-        class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+        class="absolute hidden md:block inset-0 w-full h-full object-cover z-0 pointer-events-none"
+      />
+
+      <!-- Mobile -->
+      <img 
+        src="./static/images/Group 841.png" 
+        alt="Background Image Mobile" 
+        class="absolute md:hidden w-full h-auto object-cover top-0" 
       />
 
       <div class="relative w-full h-full flex flex-col justify-start items-start p-24 z-20">
 
         <div class="text-white max-w-3xl">
-          <h2 class="text-3xl md:text-4xl font-base leading-tigh uppercase">
+          <h2 class="text-3xl md:text-4xl font-base leading-tigh hidden md:block uppercase">
             <b>Sua vista para o mar de Itacimirim</b><br>
             com tranquilidade e exclusividade<br>
             à beira da lagoa
           </h2>
         </div>
       </div>
+
+      <!-- Texto mobile -->
+      <div class="block md:hidden justify-center items-center text-center top-60 absolute z-20 w-full px-4">
+        <h2 class="text-md font-base uppercase italic">
+          <b>Sua vista para o mar de Itacimirim</b><br>
+          com tranquilidade e exclusividade<br>
+          à beira da lagoa
+        </h2>
+      </div>
+
       <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#FBF1C3] to-transparent"></div>
 
 
@@ -159,14 +221,14 @@
       <img 
         src="./static/images/folhas 2.png" 
         alt="Folhagem decorativa"
-        class="absolute bottom-0 right-0 w-80 z-30 pointer-events-none"
+        class="absolute bottom-0 right-0 w-80 z-30 pointer-events-none hidden md:block"
       />
 
     </section>
 
     <!-- SEÇÃO CARROSSEL -->
     <section class="py-12">
-      <div class="container mx-auto px-6 text-center">
+      <div class="mx-auto px-0 md:px-0 text-center">
 
         <!-- Carrossel -->
         <div class="relative">
@@ -174,78 +236,77 @@
             <div class="swiper-wrapper">
 
               <!-- Slide -->
-              <div class="swiper-slide relative !w-[80%]">
+              <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ILHA-DO-MEIO---ÁREA-GOURMET (1).png" alt="Área Gourmet"
-                    class="w-full h-[80vh] object-cover">
-                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-l font-semibold px-3 py-1 rounded-full shadow">
+                  class="w-full h-[60vh] md:h-[80vh] object-cover">
+                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   ÁREA GOURMET
                 </span>
               </div>
 
               <!-- Slide -->
-              <div class="swiper-slide relative !w-[80%]">
+              <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ILHA-DO-MEIO---TERRAÇO-DESCOBERTO.png" alt="Terraço descoberto"
-                    class="w-full h-[80vh] object-cover">
-                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-l font-semibold px-3 py-1 rounded-full shadow">
+                  class="w-full h-[60vh] md:h-[80vh] object-cover">
+                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   TERRAÇO DESCOBERTO
                 </span>
               </div>
 
               <!-- Slide -->
-              <div class="swiper-slide relative !w-[80%]">
+              <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ILHA-DO-MEIO---TERRAÇO-DESCOBERTO-COM-HIDRO.png" alt="Terraço descoberto com hidro"
-                    class="w-full h-[80vh] object-cover">
-                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-l font-semibold px-3 py-1 rounded-full shadow">
+                  class="w-full h-[60vh] md:h-[80vh] object-cover">
+                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   TERRAÇO DESCOBERTO COM HIDRO
                 </span>
               </div>
 
               <!-- Slide -->
-              <div class="swiper-slide relative !w-[80%]">
+              <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ILHA-DO-MEIO---JARDIM-E-ÁREA-DE-SERVIÇO.png" alt="Jardim e área de serviço"
-                    class="w-full h-[80vh] object-cover">
-                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-l font-semibold px-3 py-1 rounded-full shadow">
+                  class="w-full h-[60vh] md:h-[80vh] object-cover">
+                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   JARDIM E ÁREA DE SERVIÇO
                 </span>
               </div>
 
               <!-- Slide -->
-              <div class="swiper-slide relative !w-[80%]">
+              <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ILHA DO MEIO - DECK E PISCINA.png" alt="Deck e Piscina"
-                    class="w-full h-[80vh] object-cover">
-                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-l font-semibold px-3 py-1 rounded-full shadow">
+                  class="w-full h-[60vh] md:h-[80vh] object-cover">
+                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   DECK E PISCINA
                 </span>
               </div>
 
               <!-- Slide -->
-              <div class="swiper-slide relative !w-[80%]">
+              <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ILHA-DO-MEIO---ÁREA-DE-CONVIVÊNCIA.png" alt="Área de Convivência"
-                    class="w-full h-[80vh] object-cover">
-                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-l font-semibold px-3 py-1 rounded-full shadow">
+                  class="w-full h-[60vh] md:h-[80vh] object-cover">
+                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   ÁREA DE CONVIVÊNCIA
                 </span>
               </div>
 
-
             </div>
 
             <!-- Botões de navegação -->
-            <div class="swiper-button-prev !text-white !text-4xl "></div>
-            <div class="swiper-button-next !text-white !text-4xl"></div>
+            <div class="swiper-button-prev !text-white !text-3xl md:!text-4xl"></div>
+            <div class="swiper-button-next !text-white !text-3xl md:!text-4xl"></div>
           </div>
         </div>
-      <!-- Botão -->
-      <div class="relative mt-12 flex justify-center z-20">
-        <a 
-          href="javascript:void(0)" 
-          onclick="openModal('')"
-          class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition"
-        >
-          AGENDAR VISITA
-        </a>
-      </div>
 
+        <!-- Botão -->
+        <div class="relative mt-12 flex justify-center z-20">
+          <a 
+            href="javascript:void(0)" 
+            onclick="openModal('')"
+            class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition"
+          >
+            AGENDAR VISITA
+          </a>
+        </div>
       </div>
     </section>
 

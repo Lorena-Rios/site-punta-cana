@@ -1,4 +1,27 @@
 
+  // INICIALIZAÇÃO DO SWIPER
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: "auto",
+  centeredSlides: true,
+  spaceBetween: 20,
+  loop: true,
+  breakpoints: {
+    0: { // mobile
+      slidesPerView: "auto",
+      centeredSlides: true,
+      spaceBetween: 10,
+    },
+    768: { // desktop
+      slidesPerView: "auto",
+      centeredSlides: true,
+      spaceBetween: 20,
+    }
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 
   // MENU HAMBURGUER
@@ -10,16 +33,3 @@
       menu.classList.toggle('hidden');
     });
   });
-
-
-  // INICIALIZAÇÃO DO SWIPER
-  var swiper = new Swiper(".mySwiper", {
-  slidesPerView: "auto",
-  centeredSlides: true,
-  spaceBetween: 30,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
