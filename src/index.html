@@ -96,8 +96,7 @@
         BAIXAR BOOK</a>
 
         <a 
-        href="javascript:void(0)" 
-        onclick="openModal('')" 
+        href="#forms" 
         class="block text-stone-800 text-base tracking-wide hover:text-lime-700 transition">
         FALE COM UM CONSULTOR</a>
       </div>
@@ -135,14 +134,9 @@
         <!-- MOBILE -->
         <div class="block lg:hidden">
           <img 
-          src="./static/images/ilha do meio vista da lago_noText.png" 
+          src="./static/images/ilha do meio vista da lago.png" 
           alt="punta cana lagoon" 
           class="mt-8 w-full h-auto object-contain" />
-          <p class="mt-4 text-center max-w-prose bottom-3 right-3 text-lime-50 text-l font-semibold px-1 py-1 rounded-full">
-            Um paraíso exclusivo para chamar de seu na praia de Itacimirim
-            <i><br><br>2 suítes com lavabo
-            <br>na praia de Itacimirim</i>
-          </p>
         </div>
 
         <!-- Folhas -->
@@ -162,7 +156,7 @@
         </div>
 
         <!-- Botão -->
-        <div class="absolute bottom-16 z-30">
+        <div class="absolute bottom-24 md:bottom-16 z-30">
           <a 
             href="javascript:void(0)" 
             onclick="openModal('')" 
@@ -174,10 +168,9 @@
       </div>
     </section>
     
-    <!-- SEÇÃO LOCALIZAÇÃO -->
+    <!-- SEÇÃO LOCAL -->
     <section 
     class="relative overflow-hidden w-full h-[45vh] md:h-[100vh] flex items-center justify-center"
-    id="section-localizacao"
     >
 
       <!-- Background -->
@@ -330,6 +323,7 @@
               src="./static/images/ap1.png"
               alt="Planta apartamentos térreos"
               class="w-32 sm:w-40 md:w-56 h-auto object-contain hover:scale-110 transition cursor-pointer"
+              onclick="openImageModal('./static/images/individual-terreo 1.png')"
             />
             <div class="text-center md:text-left">
               <h3 class="text-base sm:text-lg md:text-2xl font-semibold">
@@ -347,6 +341,8 @@
               src="./static/images/ap2.png"
               alt="Planta apartamentos superiores"
               class="w-40 sm:w-52 md:w-72 h-auto object-contain hover:scale-110 transition cursor-pointer"
+              onclick="openImageModal('./static/images/individual-com-varanda1 1.png')"
+
             />
             <div class="text-center md:text-left">
               <h3 class="text-base sm:text-lg md:text-2xl font-semibold">
@@ -420,28 +416,45 @@
         <div class="relative overflow-hidden">
           <img src="./static/images/Mask group.png" alt="Sala" class="w-full h-full object-cover rounded-lg">
           <div class="absolute bottom-6 right-3 md:right-5 md:bottom-10 p-1 flex items-center justify-center">
-            <img src="./static/images/lupa.png" alt="Zoom" class="md:w-8 md:h-8 w-6 h-6 hover:scale-110 transition cursor-pointer">
+            <img 
+            src="./static/images/lupa.png" 
+            alt="Zoom" 
+            class="md:w-8 md:h-8 w-6 h-6 hover:scale-110 transition cursor-pointer"
+            onclick="openImageModal('./static/images/ILHA-DO-MEIO---SALA-DE-ESTAR-E-VARANDA---PAV.-SUPERIOR.png')"
+            >
           </div>
         </div>
 
         <div class="relative overflow-hidden">
           <img src="./static/images/Mask group-1.png" alt="Cozinha" class="w-full h-full object-cover rounded-lg">
           <div class="absolute bottom-6 right-3 md:right-5 md:bottom-10 p-1 flex items-center justify-center">
-            <img src="./static/images/lupa.png" alt="Zoom" class="md:w-8 md:h-8 w-6 h-6 hover:scale-110 transition cursor-pointer">
+            <img 
+            src="./static/images/lupa.png" 
+            alt="Zoom" 
+            class="md:w-8 md:h-8 w-6 h-6 hover:scale-110 transition cursor-pointer"
+            onclick="openImageModal('./static/images/ILHA-DO-MEIO---SALA-DE-ESTAR---TÉRREO.png')">
           </div>
         </div>
 
         <div class="relative overflow-hidden">
           <img src="./static/images/Mask group-2.png" alt="Quarto" class="w-full h-full object-cover rounded-lg">
           <div class="absolute bottom-6 right-3 md:right-5 md:bottom-10 p-1 flex items-center justify-center">
-            <img src="./static/images/lupa.png" alt="Zoom" class="md:w-8 md:h-8 w-6 h-6 hover:scale-110 transition cursor-pointer">
+            <img 
+            src="./static/images/lupa.png" 
+            alt="Zoom" 
+            class="md:w-8 md:h-8 w-6 h-6 hover:scale-110 transition cursor-pointer"
+            onclick="openImageModal('./static/images/ILHA-DO-MEIO---SUÍTE-SOLTEIRO.png')">
           </div>
         </div>
 
         <div class="relative overflow-hidden">
           <img src="./static/images/Mask group-3.png" alt="Suíte" class="w-full h-full object-cover rounded-lg">
           <div class="absolute bottom-6 right-3 md:right-5 md:bottom-10 p-1 flex items-center justify-center">
-            <img src="./static/images/lupa.png" alt="Zoom" class="md:w-8 md:h-8 w-6 h-6 hover:scale-110 transition cursor-pointer">
+            <img 
+            src="./static/images/lupa.png" 
+            alt="Zoom" 
+            class="md:w-8 md:h-8 w-6 h-6 hover:scale-110 transition cursor-pointer"
+            onclick="openImageModal('./static/images/ILHA-DO-MEIO---SUÍTE-CASAL.png')">
           </div>
         </div>
       </div>
@@ -465,64 +478,69 @@
       </div>
     </section>
 
-
     <!-- SEÇÃO ARQUITETOS -->
-    <section class="py-16 relative h-[100vh] flex items-center">
-      <!-- Container principal -->
-      <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-10 z-10">
+    <section class="py-16 relative min-h-screen flex items-center"> 
+      <!-- Container principal --> 
+      <div class="container mx-auto px-6 z-10 w-full"> 
+    
+        <!-- Folhagem topo --> 
+        <div class="absolute top-0 left-0 w-full h-56 overflow-hidden z-0"> 
+          <img  
+            src="./static/images/folhagem.png"  
+            alt="Folhagem topo" 
+            class="w-full h-full object-cover" 
+          /> 
+          <!-- Gradiente --> 
+          <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#FBF1C3]"></div> 
+        </div> 
 
-        <!-- Folhagem topo -->
-        <div class="absolute top-0 left-0 w-full h-56 overflow-hidden z-0">
-          <img 
-            src="./static/images/folhagem.png" 
-            alt="Folhagem topo"
-            class="w-full h-full object-cover"
-          />
-          <!-- Gradiente -->
-          <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#FBF1C3]"></div>
+        <!-- Layout -->
+        <div class="flex flex-col md:grid md:grid-cols-2 items-center gap-10 mt-16">
+          
+          <!-- Imagem --> 
+          <div class="flex justify-center order-1 md:order-2"> 
+            <img src="./static/images/Group 844.png"  
+                alt="Equipe GAM Arquitetos" 
+                class="w-auto h-[40vh] md:h-[50vh] right-20 z-20"> 
+          </div> 
+
+          <!-- Texto --> 
+          <div class="text-center md:text-left space-y-6 order-2 md:order-1"> 
+            <p class="text-gray-700 leading-relaxed text-base md:text-lg"> 
+              O projeto do Punta Cana Lagoon leva a assinatura do GAM Arquitetos.  
+              Com atuações marcantes em empreendimentos,  
+              residências, hotéis e espaços comerciais, o GAM se destaca por  
+              desenvolver propostas com identidade própria,  
+              sempre alinhados ao estilo de vida e aos desejos de cada cliente. 
+              <br><br> 
+              No Punta Cana Lagoon, 
+              a arquitetura nasce do encontro entre leveza, funcionalidade e integração com a paisagem. 
+            </p> 
+          </div> 
         </div>
 
-        <!-- Texto -->
-        <div class="text-center md:text-left space-y-6 mt-16">
-          <p class="text-gray-700 leading-relaxed text-lg">
-            O projeto do Punta Cana Lagoon leva a assinatura do GAM Arquitetos. 
-            Com atuações marcantes em empreendimentos, 
-            residências, hotéis e espaços comerciais, o GAM se destaca por 
-            desenvolver propostas com identidade própria, 
-            sempre alinhados ao estilo de vida e aos desejos de cada cliente.
-            <br><br>
-            No Punta Cana Lagoon,
-            a arquitetura nasce do encontro entre leveza, funcionalidade e integração com a paisagem.
-          </p>
-        </div>
-
-        <!-- Imagem -->
-        <div class="flex justify-center">
-          <img src="./static/images/Group 844.png" 
-              alt="Equipe GAM Arquitetos"
-              class="w-auto h-[50vh]">
-        </div>
-      </div>
-
-      <!-- Botão fixado no centro inferior -->
-      <div class="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20">
-        <a href="#contato" 
-          class="inline-block bg-orange-600 text-white px-6 py-3 rounded-full shadow-md font-semibold hover:bg-orange-700 transition">
-          FALE COM CORRETOR
-        </a>
-      </div>
-
-        <!-- folhas -->
-        <img 
-          src="./static/images/folhas 2.png" 
-          alt="Folhagem decorativa"
-          class="absolute bottom-16 right-0 w-40 md:w-56 pointer-events-none select-none"
-        />
-
+        <!-- Botão  --> 
+        <div class="flex justify-center mt-8 md:absolute md:bottom-24 md:left-1/2 md:transform md:-translate-x-1/2 z-20 order-3"> 
+          <a 
+            href="javascript:void(0)" 
+            onclick="openModal('')" 
+            class="inline-block bg-orange-600 text-white px-6 py-3 rounded-full shadow-md font-semibold hover:bg-orange-700 transition"> 
+            FALE COM CORRETOR 
+          </a> 
+        </div> 
+      </div> 
+    
+      <!-- folhas --> 
+      <img  
+        src="./static/images/folhas 2.png"  
+        alt="Folhagem decorativa" 
+        class="absolute bottom-16 right-0 w-32 md:w-56 pointer-events-none select-none opacity-45 md:opacity-0" 
+      /> 
+    
     </section>
 
     <!-- SEÇÃO EMPREENDIMENTO -->
-    <section class="py-16">
+    <section class="py-8 md:py-16">
       <div class="container mx-auto px-6">
 
         <!-- Grid principal: texto institucional à esquerda, destaque à direita -->
@@ -615,15 +633,16 @@
       </div>
     </section>
 
-
-
-
     <!-- SEÇÃO MAPA -->
-    <section>
+    <section 
+    id="section-localizacao"
+    >
     </section>
 
     <!-- SEÇÃO FORMULÁRIO -->
-    <section class="form-section relative overflow-hidden py-16 mt-16 bg-cover bg-center">
+    <section 
+    class="form-section relative overflow-hidden py-16 mt-8 md:mt-16 bg-cover bg-center"
+    id="forms">
       
       <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#FBF1C3] to-transparent z-10"></div>
 
@@ -693,14 +712,14 @@
       <img 
         src="./static/images/folhas 3.png" 
         alt="Folhagem decorativa"
-        class="absolute bottom-0 left-0 w-80 z-30 pointer-events-none"
+        class="absolute bottom-0 left-0 w-32 md:w-80 z-30 pointer-events-none"
       />
 
       <!-- Conchas -->
       <img 
         src="./static/images/summer-time-concept-flat-lay-composition-with-beautiful-starfish-sea-shells-colored-table-top-view-with-copy-space-text 2 1.png" 
         alt="Folhagem decorativa"
-        class="absolute bottom-0 right-0 w-80 z-30 pointer-events-none"
+        class="absolute bottom-0 right-0 w-32 md:w-80 z-30 pointer-events-none"
       />
     </section>
 
@@ -709,10 +728,164 @@
 
 
 
-    <!-- MODAL -->
-    <div
-      class="modal bg-black bg-opacity-20 backdrop-blur-sm fixed w-full top-0 min-h-screen justify-center items-center z-[999] hidden"
-    ></div>
+      <!-- MODAL -->
+        <div
+          class="modal bg-black bg-opacity-20 backdrop-blur-sm fixed w-full top-0 min-h-screen justify-center items-center z-[999] hidden"
+        >
+          <div
+            class="content-modal w-11/12 sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-4/12 max-h-[90vh] overflow-y-auto"
+          >
+            <div
+              class="relative w-full rounded bg-zinc-200 bg-opacity-90 shadow-lg p-6 md:p-8 text-stone-800"
+            >
+              <!-- Botão Fechar -->
+              <button
+                onclick="closeModal()"
+                id="close-modal"
+                type="button"
+                class="absolute right-3 top-3 hover:scale-105 transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="w-6 h-6 text-orange-600"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+                  />
+                </svg>
+                <span class="sr-only">Close Modal</span>
+              </button>
+
+              <form class="space-y-4 form-cadastro">
+                <input
+                  type="hidden"
+                  name="interesse"
+                  id="interesse"
+                  value="Saiba Mais"
+                />
+
+                <!-- Título -->
+                <div>
+                  <h3
+                    class="text-lg md:text-xl font-normal mb-2 uppercase tracking-wide modal-title"
+                  >
+                    Saiba Mais
+                  </h3>
+                  <p class="text-sm md:text-base mb-4">
+                    Faça o seu cadastro, em breve entraremos em contato.
+                  </p>
+                </div>
+
+                <!-- Campos -->
+                <div class="space-y-3">
+                  <div>
+                    <label for="nome" class="block text-xs md:text-sm mb-1"
+                      >Nome</label
+                    >
+                    <input
+                      type="text"
+                      id="nome"
+                      name="nome"
+                      required
+                      placeholder="Informe seu nome"
+                      class="w-full px-4 py-3 bg-zinc-100 bg-opacity-80 text-xs md:text-sm text-gray-800 placeholder-gray-500 focus:outline-none rounded"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="email" class="block text-xs md:text-sm mb-1"
+                      >E-mail</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      placeholder="Informe seu e-mail"
+                      class="w-full px-4 py-3 bg-zinc-100 bg-opacity-80 text-xs md:text-sm text-gray-800 placeholder-gray-500 focus:outline-none rounded"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="telefone" class="block text-xs md:text-sm mb-1"
+                      >Celular</label
+                    >
+                    <input
+                      id="telefone"
+                      name="telefone"
+                      required
+                      placeholder="Informe celular"
+                      class="w-full px-4 py-3 bg-zinc-100 telefone bg-opacity-80 text-xs md:text-sm text-gray-800 placeholder-gray-500 focus:outline-none rounded"
+                    />
+                  </div>
+                </div>
+
+                <!-- Texto Legal -->
+                <p class="text-xs md:text-sm text-gray-700 mt-2">
+                  Ao informar meus dados, eu concordo com a
+                  <a
+                    href="./politica-de-privacidade/index.html"
+                    target="_blank"
+                    class="underline"
+                    >Política de Privacidade</a
+                  >.
+                </p>
+
+                <!-- Botão -->
+                <button
+                  type="submit"
+                  class="w-full py-3 bg-orange-600 text-white text-sm md:text-base hover:bg-orange-700 hover:scale-105 transition rounded"
+                >
+                  <span class="text-form">Enviar</span>
+                  <span class="load-form hidden">
+                    <svg
+                      aria-hidden="true"
+                      class="mr-2 w-5 h-5 text-gray-200 animate-spin fill-white"
+                      viewBox="0 0 100 101"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                        fill="currentFill"
+                      />
+                    </svg>
+                    <span class="sr-only">Loading...</span>
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- MODAL IMAGEM -->
+        <div
+          id="imageModal"
+          class="hidden fixed inset-0 z-[9999] bg-black bg-opacity-80 flex justify-center items-center"
+        >
+          <span
+            class="absolute top-5 right-8 text-white text-4xl font-bold cursor-pointer hover:text-gray-300"
+            onclick="closeImageModal()"
+          >
+            &times;
+          </span>
+          <img
+            id="modalImage"
+            src=""
+            alt="Imagem ampliada"
+            class="w-auto h-auto max-w-[95vw] max-h-[95vh] rounded-lg shadow-xl"
+
+          />
+        </div>
+
+
     
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
