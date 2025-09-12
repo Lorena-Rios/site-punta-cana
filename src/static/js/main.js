@@ -153,7 +153,7 @@ var swiper = new Swiper(".mySwiper", {
 
       console.log("Dados do formulário:", jsonData);
 
-      let url = "http://acheiinterativa.com.br/portal/cadastro/punta/index.php";
+      let url = "https://acheiinterativa.com.br/portal/cadastro/punta/index.php";
 
       fetch(url, {
         method: "POST",
