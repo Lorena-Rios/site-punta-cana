@@ -4,6 +4,19 @@
 @tailwind utilities;
 
 
+  .bg-pan {
+    background-image: url("./static/images/ILHA-DO-MEIO-PISCINA-VISTA-LAGOA-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    animation: pan-horizontal 25s linear infinite alternate;
+  }
+
+  @keyframes pan-horizontal {
+    0%   { background-position: left center; }
+    100% { background-position: right center; }
+  }
+
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

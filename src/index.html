@@ -13,6 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./static/css/style.css" />
+    <link rel="stylesheet" href="input.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,126 +45,156 @@
     <!-- NAVBAR -->
     <nav
       id="navbar"
-      class="fixed top-0 right-0 w-full z-50 bg-black/60 backdrop-blur-sm shadow px-4 py-3 flex justify-end items-center"
+      class="fixed top-0 left-0 w-full z-50 bg-black/60 backdrop-blur-sm shadow px-4 py-3 flex items-center justify-between transition duration-700 ease-in-out"
+      data-aos="fade-down"
+      data-aos-anchor="#section-local"
+      data-aos-offset="200"
+      data-aos-duration="700"
     >
 
+      <!-- Logo (esquerda) -->
+      <a href="#" class="flex items-center">
+        <img src="./static/images/punta_cana-lagoon marca 1.png" 
+            alt="punta cana lagoon" 
+            class="h-10 md:h-16 w-auto object-contain pointer-events-none" />
+      </a>
 
-      <!-- desktop -->
-      <div class="hidden md:flex md:space-x-8 text-right">
+      <!-- Navegação Desktop (direita) -->
+      <div class="hidden md:flex md:space-x-8 items-center">
         <a 
-        href="#section-localizacao" 
-        class="text-stone-50 text-sm tracking-wide hover:text-lime-100 transition py-1">
-        LOCALIZAÇÃO</a>
+          href="#section-localizacao" 
+          class="text-stone-50 text-sm tracking-wide hover:text-lime-100 transition py-1">
+          LOCALIZAÇÃO
+        </a>
 
         <a 
-        href="javascript:void(0)" 
-        onclick="openModal('')" 
-        class="text-stone-50 text-sm tracking-wide hover:text-lime-100 transition py-1">
-        BAIXAR BOOK</a>
+          href="javascript:void(0)" 
+          onclick="openModal('')" 
+          class="text-stone-50 text-sm tracking-wide hover:text-lime-100 transition py-1">
+          BAIXAR BOOK
+        </a>
 
         <a 
-        href="javascript:void(0)" 
-        onclick="openModal('')" 
-        class="text-stone-50 text-sm tracking-wide hover:text-lime-100 transition py-1">
-        FALE COM UM CONSULTOR</a>
+          href="javascript:void(0)" 
+          onclick="openModal('')" 
+          class="text-stone-50 text-sm tracking-wide hover:text-lime-100 transition py-1">
+          FALE COM UM CONSULTOR
+        </a>
       </div>
 
-      <!-- hamburguer -->
+      <!-- Botão Hamburguer (direita no mobile) -->
       <button id="menu-btn" class="md:hidden text-white focus:outline-none ml-4">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
 
-      <!-- mobile -->
-      <div id="menu" class="absolute top-[60px] right-4 md:hidden hidden bg-white/90 backdrop-blur-lg rounded-lg shadow-lg p-4 space-y-3">
+      <!-- Menu Mobile -->
+      <div id="menu" 
+          class="absolute top-[72px] right-4 md:hidden hidden bg-black/55 backdrop-blur-lg rounded-sm shadow-lg p-4 space-y-3">
         <a 
-        href="#section-localizacao" 
-        class="block text-stone-800 text-base tracking-wide hover:text-lime-700 transition">
-        LOCALIZAÇÃO</a>
+          href="#section-localizacao" 
+          class="block text-stone-50 text-base tracking-wide hover:text-lime-100 transition">
+          LOCALIZAÇÃO
+        </a>
 
         <a 
-        href="javascript:void(0)" 
-        onclick="openModal('')" 
-        class="block text-stone-800 text-base tracking-wide hover:text-lime-700 transition">
-        BAIXAR BOOK</a>
+          href="javascript:void(0)" 
+          onclick="openModal('')" 
+          class="block text-stone-50 text-base tracking-wide hover:text-lime-700 transition">
+          BAIXAR BOOK
+        </a>
 
         <a 
-        href="#forms" 
-        class="block text-stone-800 text-base tracking-wide hover:text-lime-700 transition">
-        FALE COM UM CONSULTOR</a>
+          href="#forms" 
+          class="block text-stone-50 text-base tracking-wide hover:text-lime-700 transition">
+          FALE COM UM CONSULTOR
+        </a>
       </div>
-
     </nav>
 
+
     <!-- HERO SECTION -->
-    <section class="relative overflow-hidden w-full h-[100vh]">
+<section class="relative overflow-hidden w-full h-[100vh]">
 
-      <!-- Background -->
+  <!-- Background Desktop -->
+  <img
+    src="./static/images/folhagem.png"
+    alt="Background Image"
+    class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none hidden md:block"
+  />
+
+  <!-- Overlay com gradiente escuro no topo -->
+  <div class="block md:hidden absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/60 via-transparent to-transparent z-10"></div>
+
+  <!-- Background Mobile (animado) -->
+  <div class="absolute inset-0 w-full h-full block md:hidden bg-pan"></div>
+
+  <!-- Logo em madeira -->
+  <div class="absolute top-0 left-20 md:left-40 z-40">
+    <img
+      src="./static/images/wooden- 1.png"
+      class="w-[30vh] md:w-[50vh] drop-shadow-lg"
+    />
+  </div>
+
+  <!-- Conteúdo centralizado -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-center z-20 px-4">
+    <h2 class="text-green-950 text-lg md:text-2xl font-medium leading-snug uppercase">
+      Um paraíso exclusivo <br>
+      para chamar de seu na <br>
+      <b>praia de Itacimirim</b>
+    </h2>
+    <h3 class="text-green-950 text-xl md:text-3xl font-semibold mt-4 uppercase">
+      <b>2 suítes com lavabo</b> <br>
+      na praia de itacimirim
+    </h3>
+  </div>
+
+  <div class="relative w-full h-full flex justify-center items-center">
+
+    <!-- DESKTOP -->
+    <div class="mt-8 hidden lg:block">
+      <img 
+        src="./static/images/ilha do meio vista da lago.png" 
+        alt="punta cana lagoon" 
+        class="w-full max-w-7xl h-auto object-contain z-10" />
+    </div>
+
+    <!-- Folhas -->
+    <div class="hidden md:block absolute bottom-2 left-0 z-30">
       <img
-        src="./static/images/folhagem.png"
-        alt="Background Image"
-        class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+        src="./static/images/folhas 1.png"
+        class="w-88 drop-shadow-lg"
       />
+    </div>
 
-      <!-- Logo em madeira -->
-      <div class="absolute top-0 left-20 md:left-40 z-40">
-        <img
-          src="./static/images/wooden- 1.png"
-          class="w-[30vh] md:w-[50vh] drop-shadow-lg"
-        />
-      </div>
+    <!-- Casal -->
+    <div class="hidden md:block absolute bottom-0 right-10 z-30">
+      <img
+        src="./static/images/CASAL 1.png"
+        class="w-88 drop-shadow-lg"
+      />
+    </div>
 
-      <div class="relative w-full h-full flex justify-center items-center">
+    <!-- Botão -->
+    <div class="absolute bottom-24 md:bottom-16 z-30">
+      <a 
+        href="javascript:void(0)" 
+        onclick="openModal('')" 
+        class="inline-block bg-orange-600 hover:bg-orange-700 text-white text-md md:text-xl font-semibold px-8 md:px-8 py-3 rounded-full shadow-lg transition"
+      >
+        BAIXE O BOOK
+      </a>
+    </div>
+  </div>
+</section>
 
-        <!-- DESKTOP -->
-        <div class="mt-8 hidden lg:block">
-          <img 
-          src="./static/images/ilha do meio vista da lago.png" 
-          alt="punta cana lagoon" 
-          class="w-full max-w-7xl h-auto object-contain z-10" />
-        </div>
-
-        <!-- MOBILE -->
-        <div class="block lg:hidden">
-          <img 
-          src="./static/images/ilha do meio vista da lago.png" 
-          alt="punta cana lagoon" 
-          class="mt-8 w-full h-auto object-contain" />
-        </div>
-
-        <!-- Folhas -->
-        <div class="hidden md:block absolute bottom-2 left-0 z-30">
-          <img
-            src="./static/images/folhas 1.png"
-            class="w-88 drop-shadow-lg"
-          />
-        </div>
-
-        <!-- Casal -->
-        <div class="hidden md:block absolute bottom-0 right-10 z-30">
-          <img
-            src="./static/images/CASAL 1.png"
-            class="w-88 drop-shadow-lg"
-          />
-        </div>
-
-        <!-- Botão -->
-        <div class="absolute bottom-24 md:bottom-16 z-30">
-          <a 
-            href="javascript:void(0)" 
-            onclick="openModal('')" 
-            class="inline-block bg-orange-600 hover:bg-orange-700 text-white text-md md:text-xl font-semibold px-8 md:px-8 py-3 rounded-full shadow-lg transition"
-          >
-            BAIXE O BOOK
-          </a>
-        </div>
-      </div>
-    </section>
     
     <!-- SEÇÃO LOCAL -->
     <section 
-    class="relative overflow-hidden w-full h-[45vh] md:h-[100vh] flex items-center justify-center"
+    id="section-local"
+    class="relative mb-6 overflow-hidden w-full h-[45vh] md:h-[100vh] flex items-center justify-center"
     >
 
       <!-- Background -->
@@ -213,7 +244,7 @@
     </section>
 
     <!-- SEÇÃO CARROSSEL -->
-    <section class="py-12">
+    <section class="py-6 md:py-12">
       <div class="mx-auto px-0 md:px-0 text-center">
 
         <!-- Carrossel -->
@@ -224,8 +255,8 @@
               <!-- Slide -->
               <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ilha-do-meio-area-gourmet.webp" alt="Área Gourmet"
-                  class="w-full h-[60vh] md:h-[80vh] object-cover">
-                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
+                  class="w-full max-h-[60vh] md:h-[80vh] object-contain md:object-cover">
+                <span class="absolute bottom-5 md:bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   ÁREA GOURMET
                 </span>
               </div>
@@ -233,8 +264,8 @@
               <!-- Slide -->
               <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ilha-do-meio-terraco-descoberto.webp" alt="Terraço descoberto"
-                  class="w-full h-[60vh] md:h-[80vh] object-cover">
-                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
+                  class="w-full max-h-[60vh] md:h-[80vh] object-contain md:object-cover">
+                <span class="absolute bottom-5 md:bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   TERRAÇO DESCOBERTO
                 </span>
               </div>
@@ -242,8 +273,8 @@
               <!-- Slide -->
               <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ilha-do-meio-terraco-descoberto-hidro.webp" alt="Terraço descoberto com hidro"
-                  class="w-full h-[60vh] md:h-[80vh] object-cover">
-                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
+                  class="w-full max-h-[60vh] md:h-[80vh] object-contain md:object-cover">
+                <span class="absolute bottom-5 md:bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   TERRAÇO DESCOBERTO COM HIDRO
                 </span>
               </div>
@@ -251,8 +282,8 @@
               <!-- Slide -->
               <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ilha-do-meio-jardim-area-servico.webp" alt="Jardim e área de serviço"
-                  class="w-full h-[60vh] md:h-[80vh] object-cover">
-                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
+                  class="w-full max-h-[60vh] md:h-[80vh] object-contain md:object-cover">
+                <span class="absolute bottom-5 md:bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   JARDIM E ÁREA DE SERVIÇO
                 </span>
               </div>
@@ -260,8 +291,8 @@
               <!-- Slide -->
               <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ilha-do-meio-deck-piscina.webp" alt="Deck e Piscina"
-                  class="w-full h-[60vh] md:h-[80vh] object-cover">
-                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
+                  class="w-full max-h-[60vh] md:h-[80vh] object-contain md:object-cover">
+                <span class="absolute bottom-5 md:bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   DECK E PISCINA
                 </span>
               </div>
@@ -269,8 +300,8 @@
               <!-- Slide -->
               <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ilha-do-meio-area-convivencia.webp" alt="Área de Convivência"
-                  class="w-full h-[60vh] md:h-[80vh] object-cover">
-                <span class="absolute bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
+                  class="w-full max-h-[60vh] md:h-[80vh] object-contain md:object-cover z-10">
+                <span class="absolute bottom-5 md:bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   ÁREA DE CONVIVÊNCIA
                 </span>
               </div>
@@ -284,7 +315,7 @@
         </div>
 
         <!-- Botão -->
-        <div class="relative mt-12 flex justify-center z-20">
+        <div class="relative mt-6 md:mt-12 flex justify-center z-20">
           <a 
             href="javascript:void(0)" 
             onclick="openModal('')"
@@ -315,11 +346,11 @@
             <img
               src="./static/images/ap1.png"
               alt="Planta apartamentos térreos"
-              class="w-32 sm:w-40 md:w-56 h-auto object-contain hover:scale-110 transition cursor-pointer"
+              class="w-48 md:w-56 h-auto object-contain hover:scale-110 transition cursor-pointer"
               onclick="openImageModal('./static/images/individual-terreo 1.png')"
             />
             <div class="text-center md:text-left">
-              <h3 class="text-base sm:text-lg md:text-2xl font-semibold">
+              <h3 class="text-base sm:text-lg md:text-2xl font-semibold uppercase">
                 APARTAMENTOS TÉRREOS
               </h3>
               <p class="mt-2 text-sm sm:text-base md:text-lg">
@@ -333,12 +364,12 @@
             <img
               src="./static/images/ap2.png"
               alt="Planta apartamentos superiores"
-              class="w-40 sm:w-52 md:w-72 h-auto object-contain hover:scale-110 transition cursor-pointer"
+              class="w-52 md:w-72 h-auto object-contain hover:scale-110 transition cursor-pointer"
               onclick="openImageModal('./static/images/individual-com-varanda1 1.png')"
 
             />
             <div class="text-center md:text-left">
-              <h3 class="text-base sm:text-lg md:text-2xl font-semibold">
+              <h3 class="text-base sm:text-lg md:text-2xl font-semibold uppercase">
                 Apartamentos superiores
               </h3>
               <p class="mt-2 text-sm sm:text-base md:text-lg">
@@ -406,48 +437,57 @@
       <!-- GRID -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl z-10 w-full lg:w-auto">
         <!-- Card imagem -->
-        <div class="relative overflow-hidden">
+        <div class="relative overflow-hidden hover:scale-110 transition cursor-pointer"
+        onclick="openImageModal('./static/images/ilha-do-meio-sala-estar-varanda-pav-superior.png')">
           <img src="./static/images/Mask group.png" alt="Sala" class="w-full h-full object-cover rounded-lg">
           <div class="absolute bottom-6 right-3 md:right-5 md:bottom-10 p-1 flex items-center justify-center">
             <img 
             src="./static/images/lupa.png" 
             alt="Zoom" 
-            class="md:w-8 md:h-8 w-6 h-6 hover:scale-110 transition cursor-pointer"
-            onclick="openImageModal('./static/images/ilha-do-meio-sala-estar-varanda-pav-superior.png')"
+            class="md:w-8 md:h-8 w-6 h-6"
             >
           </div>
         </div>
 
-        <div class="relative overflow-hidden">
+        <div class="relative overflow-hidden hover:scale-110 transition cursor-pointer"
+        onclick="openImageModal('./static/images/ilha-do-meio-sala-estar-terreo.png')">
           <img src="./static/images/Mask+group-1.webp" alt="Cozinha" class="w-full h-full object-cover rounded-lg">
-          <div class="absolute bottom-6 right-3 md:right-5 md:bottom-10 p-1 flex items-center justify-center">
+          <div 
+            class="absolute bottom-6 right-3 md:right-5 md:bottom-10 p-1 flex items-center justify-center"
+            >
             <img 
             src="./static/images/lupa.png" 
             alt="Zoom" 
-            class="md:w-8 md:h-8 w-6 h-6 hover:scale-110 transition cursor-pointer"
-            onclick="openImageModal('./static/images/ilha-do-meio-sala-estar-terreo.png')">
+            class="md:w-8 md:h-8 w-6 h-6"
+            >
           </div>
         </div>
 
-        <div class="relative overflow-hidden">
+        <div class="relative overflow-hidden hover:scale-110 transition cursor-pointer "
+        onclick="openImageModal('./static/images/ilha-do-meio-suite-solteiro.png')">
           <img src="./static/images/Mask group-2.png" alt="Quarto" class="w-full h-full object-cover rounded-lg">
-          <div class="absolute bottom-6 right-3 md:right-5 md:bottom-10 p-1 flex items-center justify-center">
+          <div 
+            class="absolute bottom-6 right-3 md:right-5 md:bottom-10 p-1 flex items-center justify-center"
+            >
             <img 
             src="./static/images/lupa.png" 
             alt="Zoom" 
-            class="md:w-8 md:h-8 w-6 h-6 hover:scale-110 transition cursor-pointer"
-            onclick="openImageModal('./static/images/ilha-do-meio-suite-solteiro.png')">
+            class="md:w-8 md:h-8 w-6 h-6"
+            >
           </div>
         </div>
 
-        <div class="relative overflow-hidden">
+        <div class="relative overflow-hidden hover:scale-110 transition cursor-pointer"
+        onclick="openImageModal('./static/images/ilha-do-meio-suite-casal.png')">
           <img src="./static/images/Mask group-3.png" alt="Suíte" class="w-full h-full object-cover rounded-lg">
-          <div class="absolute bottom-6 right-3 md:right-5 md:bottom-10 p-1 flex items-center justify-center">
+          <div 
+          class="absolute bottom-6 right-3 md:right-5 md:bottom-10 p-1 flex items-center justify-center"
+          >
             <img 
             src="./static/images/lupa.png" 
             alt="Zoom" 
-            class="md:w-8 md:h-8 w-6 h-6 hover:scale-110 transition cursor-pointer"
-            onclick="openImageModal('./static/images/ilha-do-meio-suite-casal.png')">
+            class="md:w-8 md:h-8 w-6 h-6"
+            >
           </div>
         </div>
       </div>
@@ -740,10 +780,6 @@
         class="absolute bottom-0 right-0 w-32 md:w-80 z-30 pointer-events-none"
       />
     </section>
-
-
-
-
 
 
       <!-- MODAL -->

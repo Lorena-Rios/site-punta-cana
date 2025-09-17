@@ -1,3 +1,10 @@
+    // INICIALIZANDO AOS
+    AOS.init({
+      duration: 800,
+      once: false,
+      mirror: true
+
+    });
 
   // INICIALIZAÇÃO DO SWIPER
 var swiper = new Swiper(".mySwiper", {
@@ -5,6 +12,10 @@ var swiper = new Swiper(".mySwiper", {
   centeredSlides: true,
   spaceBetween: 20,
   loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false, 
+  },
   breakpoints: {
     0: { // mobile
       slidesPerView: "auto",
