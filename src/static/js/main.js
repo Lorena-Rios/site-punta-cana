@@ -6,6 +6,7 @@
 
     });
 
+
   // INICIALIZAÇÃO DO SWIPER
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: "auto",

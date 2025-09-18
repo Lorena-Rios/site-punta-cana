@@ -115,80 +115,83 @@
 
 
     <!-- HERO SECTION -->
-<section class="relative overflow-hidden w-full h-[100vh]">
+    <section class="relative overflow-hidden w-full h-[100vh]">
 
-  <!-- Background Desktop -->
-  <img
-    src="./static/images/folhagem.png"
-    alt="Background Image"
-    class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none hidden md:block"
-  />
-
-  <!-- Overlay com gradiente escuro no topo -->
-  <div class="block md:hidden absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/60 via-transparent to-transparent z-10"></div>
-
-  <!-- Background Mobile (animado) -->
-  <div class="absolute inset-0 w-full h-full block md:hidden bg-pan"></div>
-
-  <!-- Logo em madeira -->
-  <div class="absolute top-0 left-20 md:left-40 z-40">
-    <img
-      src="./static/images/wooden- 1.png"
-      class="w-[30vh] md:w-[50vh] drop-shadow-lg"
-    />
-  </div>
-
-  <!-- Conteúdo centralizado -->
-  <div class="absolute inset-0 flex flex-col items-center justify-center text-center z-20 px-4">
-    <h2 class="text-green-950 text-lg md:text-2xl font-medium leading-snug uppercase">
-      Um paraíso exclusivo <br>
-      para chamar de seu na <br>
-      <b>praia de Itacimirim</b>
-    </h2>
-    <h3 class="text-green-950 text-xl md:text-3xl font-semibold mt-4 uppercase">
-      <b>2 suítes com lavabo</b> <br>
-      na praia de itacimirim
-    </h3>
-  </div>
-
-  <div class="relative w-full h-full flex justify-center items-center">
-
-    <!-- DESKTOP -->
-    <div class="mt-8 hidden lg:block">
-      <img 
-        src="./static/images/ilha do meio vista da lago.png" 
-        alt="punta cana lagoon" 
-        class="w-full max-w-7xl h-auto object-contain z-10" />
-    </div>
-
-    <!-- Folhas -->
-    <div class="hidden md:block absolute bottom-2 left-0 z-30">
+      <!-- Background Desktop -->
       <img
-        src="./static/images/folhas 1.png"
-        class="w-88 drop-shadow-lg"
+        src="./static/images/folhagem.png"
+        alt="Background Image"
+        class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none hidden md:block"
       />
-    </div>
 
-    <!-- Casal -->
-    <div class="hidden md:block absolute bottom-0 right-10 z-30">
-      <img
-        src="./static/images/CASAL 1.png"
-        class="w-88 drop-shadow-lg"
-      />
-    </div>
+      <div class="block md:hidden absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/60 via-transparent to-transparent z-10"></div>
 
-    <!-- Botão -->
-    <div class="absolute bottom-24 md:bottom-16 z-30">
-      <a 
-        href="javascript:void(0)" 
-        onclick="openModal('')" 
-        class="inline-block bg-orange-600 hover:bg-orange-700 text-white text-md md:text-xl font-semibold px-8 md:px-8 py-3 rounded-full shadow-lg transition"
+      <!-- Background Mobile -->
+      <div class="absolute inset-0 w-full h-full block md:hidden bg-pan"></div>
+
+      <!-- Logo em madeira -->
+      <div class="absolute top-0 left-20 md:left-40 z-40">
+        <img
+          src="./static/images/wooden- 1.png"
+          class="w-[30vh] md:w-[50vh] drop-shadow-lg"
+        />
+      </div>
+
+      <!-- Conteúdo centralizado -->
+      <div class="block md:hidden absolute inset-0 flex flex-col items-center justify-center text-center z-20 px-2"
+      data-aos="fade-right"
+      data-aos-delay="15000"
+      data-aos-duration="15000"
       >
-        BAIXE O BOOK
-      </a>
-    </div>
-  </div>
-</section>
+        <h2 class="text-orange-950 text-base md:text-2xl font-medium leading-snug uppercase bg-white/70 p-2 rounded">
+          Um paraíso exclusivo <br>
+          para chamar de seu na <br>
+          <b>praia de Itacimirim</b>
+        </h2>
+        <h3 class="text-orange-950 text-base md:text-3xl font-medium mt-4 uppercase bg-white/70 p-2 rounded">
+          <b>2 suítes com lavabo</b> <br>
+          na praia de itacimirim
+        </h3>
+      </div>
+
+      <div class="relative w-full h-full flex justify-center items-center">
+
+        <!-- DESKTOP -->
+        <div class="mt-8 hidden lg:block">
+          <img 
+            src="./static/images/ilha do meio vista da lago.png" 
+            alt="punta cana lagoon" 
+            class="w-full max-w-7xl h-auto object-contain z-10" />
+        </div>
+
+        <!-- Folhas -->
+        <div class="hidden md:block absolute bottom-2 left-0 z-30">
+          <img
+            src="./static/images/folhas 1.png"
+            class="w-88 drop-shadow-lg"
+          />
+        </div>
+
+        <!-- Casal -->
+        <div class="hidden md:block absolute bottom-0 right-10 z-30">
+          <img
+            src="./static/images/CASAL 1.png"
+            class="w-88 drop-shadow-lg"
+          />
+        </div>
+
+        <!-- Botão -->
+        <div class="absolute bottom-8 md:bottom-16 z-30">
+          <a 
+            href="javascript:void(0)" 
+            onclick="openModal('')" 
+            class="inline-block bg-orange-600 hover:bg-orange-700 text-white text-md md:text-xl font-semibold px-8 md:px-8 py-3 rounded-full shadow-lg transition"
+          >
+            BAIXE O BOOK
+          </a>
+        </div>
+      </div>
+    </section>
 
     
     <!-- SEÇÃO LOCAL -->
@@ -255,7 +258,7 @@
               <!-- Slide -->
               <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ilha-do-meio-area-gourmet.webp" alt="Área Gourmet"
-                  class="w-full max-h-[60vh] md:h-[80vh] object-contain md:object-cover">
+                  class="w-full max-h-[60vh] md:max-h-[80vh] object-contain md:object-cover">
                 <span class="absolute bottom-5 md:bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   ÁREA GOURMET
                 </span>
@@ -264,7 +267,7 @@
               <!-- Slide -->
               <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ilha-do-meio-terraco-descoberto.webp" alt="Terraço descoberto"
-                  class="w-full max-h-[60vh] md:h-[80vh] object-contain md:object-cover">
+                  class="w-full max-h-[60vh] md:max-h-[80vh] object-contain md:object-cover">
                 <span class="absolute bottom-5 md:bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   TERRAÇO DESCOBERTO
                 </span>
@@ -273,7 +276,7 @@
               <!-- Slide -->
               <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ilha-do-meio-terraco-descoberto-hidro.webp" alt="Terraço descoberto com hidro"
-                  class="w-full max-h-[60vh] md:h-[80vh] object-contain md:object-cover">
+                  class="w-full max-h-[60vh] md:max-h-[80vh] object-contain md:object-cover">
                 <span class="absolute bottom-5 md:bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   TERRAÇO DESCOBERTO COM HIDRO
                 </span>
@@ -282,7 +285,7 @@
               <!-- Slide -->
               <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ilha-do-meio-jardim-area-servico.webp" alt="Jardim e área de serviço"
-                  class="w-full max-h-[60vh] md:h-[80vh] object-contain md:object-cover">
+                  class="w-full max-h-[60vh] md:max-h-[80vh] object-contain md:object-cover">
                 <span class="absolute bottom-5 md:bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   JARDIM E ÁREA DE SERVIÇO
                 </span>
@@ -291,7 +294,7 @@
               <!-- Slide -->
               <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ilha-do-meio-deck-piscina.webp" alt="Deck e Piscina"
-                  class="w-full max-h-[60vh] md:h-[80vh] object-contain md:object-cover">
+                  class="w-full max-h-[60vh] md:max-h-[80vh] object-contain md:object-cover">
                 <span class="absolute bottom-5 md:bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   DECK E PISCINA
                 </span>
@@ -300,7 +303,7 @@
               <!-- Slide -->
               <div class="swiper-slide relative w-full md:!w-[80%]">
                 <img src="./static/images/carrossel/ilha-do-meio-area-convivencia.webp" alt="Área de Convivência"
-                  class="w-full max-h-[60vh] md:h-[80vh] object-contain md:object-cover z-10">
+                  class="w-full max-h-[60vh] md:max-h-[80vh] object-contain md:object-cover z-10">
                 <span class="absolute bottom-5 md:bottom-3 right-3 bg-white text-orange-600 text-sm md:text-lg font-semibold px-3 py-1 rounded-full shadow">
                   ÁREA DE CONVIVÊNCIA
                 </span>
@@ -353,7 +356,7 @@
               <h3 class="text-base sm:text-lg md:text-2xl font-semibold uppercase">
                 APARTAMENTOS TÉRREOS
               </h3>
-              <p class="mt-2 text-sm sm:text-base md:text-lg">
+              <p class="mt-2 text-base md:text-lg">
                 2 suítes com varanda, lavabo e gardens privativos.
               </p>
             </div>
@@ -372,7 +375,7 @@
               <h3 class="text-base sm:text-lg md:text-2xl font-semibold uppercase">
                 Apartamentos superiores
               </h3>
-              <p class="mt-2 text-sm sm:text-base md:text-lg">
+              <p class="mt-2 text-base md:text-lg">
                 2 suítes com varanda e terraço descoberto.
               </p>
             </div>
