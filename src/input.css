@@ -4,18 +4,41 @@
 @tailwind utilities;
 
 
-  .bg-pan {
-    background-image: url("./static/images/ILHA-DO-MEIO-PISCINA-VISTA-LAGOA-1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left center;
-    animation: pan-horizontal 25s linear infinite alternate;
-  }
+.bg-pan {
+  background-image: url("./static/images/ILHA-DO-MEIO-PISCINA-VISTA-LAGOA-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  animation: pan-horizontal 25s linear infinite alternate;
+}
 
-  @keyframes pan-horizontal {
-    0%   { background-position: left center; }
-    100% { background-position: right center; }
-  }
+@keyframes pan-horizontal {
+  0%   { background-position: left center; }
+  100% { background-position: right center; }
+}
+
+.swiper-pagination {
+  bottom: 15px !important; 
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+  width: 20px;
+  height: 20px;
+  margin: 0 6px !important;
+  border-radius: 9999px; 
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ea580c !important; 
+  opacity: 1 !important;
+  width: 30px; 
+  border-radius: 8px;
+}
+
 
 
 .ease-in-out {

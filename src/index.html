@@ -314,6 +314,9 @@
             <!-- Botões de navegação -->
             <div class="swiper-button-prev !text-white !text-3xl md:!text-4xl"></div>
             <div class="swiper-button-next !text-white !text-3xl md:!text-4xl"></div>
+
+            <!-- Paginação -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
 
@@ -427,89 +430,75 @@
       <div class="absolute inset-x-0 bottom-0 h-32 sm:h-40 bg-gradient-to-t from-[#FBF1C3] to-transparent"></div>
     </section>
 
+
     <!-- SEÇÃO INTERIORES -->
-    <section class="relative w-full py-16 px-6 lg:px-20 flex flex-col lg:flex-row items-center lg:items-start gap-10">
+    <section class="py-16 px-6 lg:px-20 relative flex items-center"> 
+      <!-- Container principal --> 
+      <div class="container mx-auto px-6 z-10 w-full"> 
 
-      <!-- folhas decorativas -->
-      <img 
-        src="./static/images/folhas 2.png" 
-        alt="Folhagem decorativa"
-        class="absolute top-0 left-0 w-32 md:w-56 -translate-y-12 -translate-x-12 pointer-events-none select-none"
-      />
+        <!-- folhas decorativas -->
+        <img 
+          src="./static/images/folhas 2.png" 
+          alt="Folhagem decorativa"
+          class="absolute top-8 left-0 w-32 md:w-56 md:top-20 md:left-8 pointer-events-none select-none z-0"
+        />
 
-      <!-- GRID -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl z-10 w-full lg:w-auto">
-        <!-- Card imagem -->
-        <div class="relative overflow-hidden hover:scale-110 transition cursor-pointer"
-        onclick="openImageModal('./static/images/ilha-do-meio-sala-estar-varanda-pav-superior.png')">
-          <img src="./static/images/Mask group.png" alt="Sala" class="w-full h-full object-cover rounded-lg">
-          <div class="absolute bottom-6 right-3 md:right-5 md:bottom-10 p-1 flex items-center justify-center">
-            <img 
-            src="./static/images/lupa.png" 
-            alt="Zoom" 
-            class="md:w-8 md:h-8 w-6 h-6"
-            >
+        <!-- Layout -->
+        <div class="flex flex-col md:grid md:grid-cols-3 items-center gap-16 mt-16">
+          
+        <!-- GRID DOS CARDS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center w-full col-span-2"> 
+          
+          <!-- Card imagem -->
+          <div class="relative overflow-hidden hover:scale-105 transition cursor-pointer w-full max-w-none"
+            onclick="openImageModal('./static/images/ilha-do-meio-sala-estar-varanda-pav-superior.png')">
+            <img src="./static/images/Mask group.png" alt="Sala" class="w-full h-60 md:h-80 object-contain shadow-xl">
+            <div class="absolute bottom-3 right-0 md:right-5 md:bottom-2 p-1 flex items-center justify-center">
+              <img src="./static/images/lupa.png" alt="Zoom" class="md:w-8 md:h-8 w-6 h-6">
+            </div>
+          </div>
+
+          <div class="relative overflow-hidden hover:scale-105 transition cursor-pointer w-full max-w-none"
+            onclick="openImageModal('./static/images/ilha-do-meio-sala-estar-terreo.png')">
+            <img src="./static/images/Mask group-1.png" alt="Cozinha" class="w-full h-60 md:h-80 object-contain shadow-xl">
+            <div class="absolute bottom-3 right-0 md:right-5 md:bottom-2 p-1 flex items-center justify-center">
+              <img src="./static/images/lupa.png" alt="Zoom" class="md:w-8 md:h-8 w-6 h-6">
+            </div>
+          </div>
+
+          <div class="relative overflow-hidden hover:scale-105 transition cursor-pointer w-full max-w-none"
+            onclick="openImageModal('./static/images/ilha-do-meio-suite-solteiro.png')">
+            <img src="./static/images/Mask group-2.png" alt="Quarto" class="w-full h-60 md:h-80 object-contain shadow-xl">
+            <div class="absolute bottom-3 right-0 md:right-5 md:bottom-2 p-1 flex items-center justify-center">
+              <img src="./static/images/lupa.png" alt="Zoom" class="md:w-8 md:h-8 w-6 h-6">
+            </div>
+          </div>
+
+          <div class="relative overflow-hidden hover:scale-105 transition cursor-pointer w-full max-w-none"
+            onclick="openImageModal('./static/images/ilha-do-meio-suite-casal.png')">
+            <img src="./static/images/Mask group-3.png" alt="Suíte" class="w-full h-60 md:h-80 object-contain shadow-xl">
+            <div class="absolute bottom-3 right-0 md:right-5 md:bottom-2 p-1 flex items-center justify-center">
+              <img src="./static/images/lupa.png" alt="Zoom" class="md:w-8 md:h-8 w-6 h-6">
+            </div>
           </div>
         </div>
 
-        <div class="relative overflow-hidden hover:scale-110 transition cursor-pointer"
-        onclick="openImageModal('./static/images/ilha-do-meio-sala-estar-terreo.png')">
-          <img src="./static/images/Mask+group-1.webp" alt="Cozinha" class="w-full h-full object-cover rounded-lg">
-          <div 
-            class="absolute bottom-6 right-3 md:right-5 md:bottom-10 p-1 flex items-center justify-center"
+        <!-- TEXTO + BOTÃO -->
+        <div class="flex flex-col justify-center items-center text-center text-stone-700 z-10 h-full col-span-1">
+          <p class="text-lg md:text-xl leading-relaxed font-normal max-w-md mb-8">
+            Viva um paraíso exclusivo na praia de Itacimirim. Garante o seu 2 suítes com lavabo à beira da lagoa
+          </p>
+          
+          <!-- Botão -->
+          <div class="relative flex justify-center z-20">
+            <a 
+              href="javascript:void(0)" 
+              onclick="openModal('')" 
+              class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition"
             >
-            <img 
-            src="./static/images/lupa.png" 
-            alt="Zoom" 
-            class="md:w-8 md:h-8 w-6 h-6"
-            >
+              BAIXE O BOOK
+            </a>
           </div>
-        </div>
-
-        <div class="relative overflow-hidden hover:scale-110 transition cursor-pointer "
-        onclick="openImageModal('./static/images/ilha-do-meio-suite-solteiro.png')">
-          <img src="./static/images/Mask group-2.png" alt="Quarto" class="w-full h-full object-cover rounded-lg">
-          <div 
-            class="absolute bottom-6 right-3 md:right-5 md:bottom-10 p-1 flex items-center justify-center"
-            >
-            <img 
-            src="./static/images/lupa.png" 
-            alt="Zoom" 
-            class="md:w-8 md:h-8 w-6 h-6"
-            >
-          </div>
-        </div>
-
-        <div class="relative overflow-hidden hover:scale-110 transition cursor-pointer"
-        onclick="openImageModal('./static/images/ilha-do-meio-suite-casal.png')">
-          <img src="./static/images/Mask group-3.png" alt="Suíte" class="w-full h-full object-cover rounded-lg">
-          <div 
-          class="absolute bottom-6 right-3 md:right-5 md:bottom-10 p-1 flex items-center justify-center"
-          >
-            <img 
-            src="./static/images/lupa.png" 
-            alt="Zoom" 
-            class="md:w-8 md:h-8 w-6 h-6"
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- TEXTO + BOTÃO -->
-      <div class="flex flex-col max-w-md text-stone-700 z-10 items-center lg:items-start mt-10 lg:mt-40 lg:ml-10 text-center lg:text-left">
-        <p class="text-lg md:text-xl leading-relaxed font-normal">
-          Viva um paraíso exclusivo na praia de Itacimirim. Garanta o seu 2 suítes com lavabo à beira da lagoa
-        </p>
-        
-        <!-- Botão -->
-        <div class="relative mt-8 flex justify-center lg:justify-start z-20">
-          <a 
-            href="javascript:void(0)" 
-            onclick="openModal('')" 
-            class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition"
-          >
-            BAIXE O BOOK
-          </a>
         </div>
       </div>
     </section>
@@ -537,7 +526,7 @@
           <div class="flex justify-center order-1 md:order-2"> 
             <img src="./static/images/Group 844.png"  
                 alt="Equipe GAM Arquitetos" 
-                class="w-auto h-[40vh] md:h-[50vh] right-20 z-20"> 
+                class="w-auto h-[40vh] md:h-[50vh] md:w-auto right-20 z-20"> 
           </div> 
 
           <!-- Texto --> 
@@ -946,7 +935,9 @@
     
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+     import { Pagination } from 'swiper/modules';
+  </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="static/js/main.js"></script>
 </html>
